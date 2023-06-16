@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Portal
+  - Loot
+  - SpawnPoint
+  - Rooms
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Postpossesing
+  - Water
+  - UI
+  - drop
+  - player
+  - enemy
+  - attractor
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Loot
+    uniqueID: 3365840479
+    locked: 0
+  - name: Floor
+    uniqueID: 171263163
+    locked: 0
+  - name: Portal
+    uniqueID: 138046729
+    locked: 0
+  - name: Enemy
+    uniqueID: 1990895049
+    locked: 0
+  - name: Player
+    uniqueID: 1812968991
+    locked: 0
+  - name: attractor
+    uniqueID: 1111083859
+    locked: 0
