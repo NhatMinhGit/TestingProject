@@ -10,16 +10,17 @@ public class LootBag : MonoBehaviour
     List<Loot> GetDroppedItem()
     {
         int randomNumber = Random.Range(1, 101);
+        Debug.Log(randomNumber);
         List<Loot> dropItems = new List<Loot>();
-        foreach(Loot item in lootList)
+        foreach (Loot item in lootList)
         {
-            if(randomNumber <= item.dropChance)
+            if (randomNumber <= item.dropChance)
             {
                 dropItems.Add(item);
                 return dropItems;
             }
         }
-        return null;
+        return dropItems;
     }
 
     public void SpawnLoot(Vector3 spawnPosition)
