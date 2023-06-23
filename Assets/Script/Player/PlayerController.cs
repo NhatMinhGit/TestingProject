@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : BaseCharacter
+public class PlayerController : Singleton<PlayerController>
 {
+   
+
     public float moveSpeed = 1f;
 
     public float collisionOffset = 0.05f;
@@ -28,8 +30,8 @@ public class PlayerController : BaseCharacter
 
     
 
-    [SerializeField] List<ItemBase> ItemsEquipped = new List<ItemBase>();
-    //AudioClip clip;
+   // [SerializeField] List<ItemBase> ItemsEquipped = new List<ItemBase>();
+    
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +44,6 @@ public class PlayerController : BaseCharacter
 
         // khai báo spriteRenderer là component SpriteRenderer
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-       
-        
 
     }
 
@@ -145,6 +144,7 @@ public class PlayerController : BaseCharacter
         }
         
     }
+    /*
     public override void Atk(BaseCharacter baseCharacter)
     {
         int baseDmg = this.dmg;
@@ -173,7 +173,7 @@ public class PlayerController : BaseCharacter
     {
         ItemsEquipped.Remove(item);
         item.Effect(this,false);
-    }
+    }*/
     public void EndSwordAttack()
     {
         UnlockMovement();
@@ -189,7 +189,7 @@ public class PlayerController : BaseCharacter
         canMove = true;
     }
     
-}
+}/*
 public abstract class BaseCharacter: MonoBehaviour
 {
     public int HP = 15;
@@ -198,4 +198,4 @@ public abstract class BaseCharacter: MonoBehaviour
 
     public abstract void GetDmg(int dmg);
     
-}
+}*/

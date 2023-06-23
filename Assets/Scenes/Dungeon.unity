@@ -218,9 +218,9 @@ MonoBehaviour:
   tilemapVisualizer: {fileID: 85207508}
   startPosition: {x: 0, y: 0}
   randomWalkParameters: {fileID: 11400000, guid: c805a22b2a71c9944bd82dc24b6bc83e, type: 2}
-  corridorLength: 7
-  corridorCount: 7
-  roomPercent: 1
+  corridorLength: 5
+  corridorCount: 5
+  roomPercent: 0.5
   portal: {fileID: 7586948141576755414, guid: 901f14b519b0f9b4a9b39b7d59112051, type: 3}
   enemy: {fileID: 5102958200855953081, guid: a69be80a442e419459dd929dc931a64a, type: 3}
   spawnChance: 0.05
@@ -2949,6 +2949,11 @@ RectTransform:
   m_AnchoredPosition: {x: 2.5, y: 0}
   m_SizeDelta: {x: -5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &383407200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1054543793713698326, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
+  m_PrefabInstance: {fileID: 1443640820}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &490274270
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,7 +4889,23 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1349603128, guid: a69be80a442e419459dd929dc931a64a, type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349603128, guid: a69be80a442e419459dd929dc931a64a, type: 3}
       propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349603128, guid: a69be80a442e419459dd929dc931a64a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 383407200}
+    - target: {fileID: 1349603129, guid: a69be80a442e419459dd929dc931a64a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1349603130, guid: a69be80a442e419459dd929dc931a64a, type: 3}
+      propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 628246956748560844, guid: a69be80a442e419459dd929dc931a64a, type: 3}
@@ -4899,6 +4920,10 @@ PrefabInstance:
       propertyPath: lootList.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: de06d3e27fec90149a2195029f8a2d20, type: 2}
+    - target: {fileID: 2427744121877892540, guid: a69be80a442e419459dd929dc931a64a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5102958200855953081, guid: a69be80a442e419459dd929dc931a64a, type: 3}
       propertyPath: m_Name
       value: Slime
@@ -5203,7 +5228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1054543793291947851, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
       propertyPath: dmg
-      value: 10
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054543793291947851, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
+      propertyPath: EnemyHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1054543793291947851, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
       propertyPath: damageDefault
@@ -5235,7 +5264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1054543793713698315, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
       propertyPath: ItemsEquipped.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1054543793713698315, guid: a4dea6c29ed64694baef38426388c4d7, type: 3}
       propertyPath: ItemsEquipped.Array.data[0]

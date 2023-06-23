@@ -10,5 +10,5 @@ public abstract class ItemBase : ScriptableObject
     public int atk;
     public int def;
     public int hp;
-    public abstract void Effect(BaseCharacter character,bool isEquipped);
+   // public abstract void Effect(BaseCharacter character,bool isEquipped);
 }

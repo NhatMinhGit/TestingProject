@@ -5,17 +5,24 @@ using UnityEngine;
 public class SwordAttack : MonoBehaviour
 {
     public Collider2D swordCollider;
-
-    public int dmg = 10;
-
     Vector2 rightAttackOffset;
 
+    //Singleton 
+    [SerializeField] PlayerData _playerData;
 
-    
+    [SerializeField] EnemyData _enemyData;
+    public float dmg;
+    public float EnemyHealth;
+    public static float currentEHP;
+
+
 
     private void Start()
     {
+        dmg = _playerData.damage;
+        EnemyHealth = _enemyData.hp;
         rightAttackOffset = transform.position;
+        Debug.Log(dmg);
     }
 
 
@@ -45,14 +52,11 @@ public class SwordAttack : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-
-            if(enemy != null)
-            {
-                enemy.Health -= this.dmg;
-                Debug.Log(dmg);
-            }
+            other.gameObject.GetComponent<Enemy>().TakeDamage(dmg);
+            Debug.Log(dmg);
         }
+        currentEHP = EnemyHealth;
+
     }
 
     

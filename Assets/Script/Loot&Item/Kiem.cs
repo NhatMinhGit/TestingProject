@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ItemData", menuName = "Item")]
 public class Kiem : ItemBase
 {
+    /*
     public override void Effect(BaseCharacter character, bool isEquipped)
     {
         if (isEquipped)
@@ -12,6 +13,6 @@ public class Kiem : ItemBase
         else
             character.dmg -= 10;
     }
-
+    */
 }
 
